@@ -12,10 +12,12 @@ function getrandom () {
 function start() {
   screenNumber = getrandom();
   checkNumber = getrandom();
-  document.getElementById("ScreenNumberDiv").innerHTML = checkNumber;
+  $(".main").attr('id','downcol'+(checkNumber));
+  console.log(checkNumber);
   var timeoutId = setTimeout(function () {
-  document.getElementById("ScreenNumberDiv").innerHTML = screenNumber;
-}, 1000);
+  $(".main").attr('id','downcol'+(screenNumber));
+  console.log(screenNumber);
+}, 2000);
 }
 
 start();
@@ -48,7 +50,7 @@ function evaluate () {
 }
 }
 
-var seconds = 50;
+var seconds = 60;
 var intervalId = setInterval(function() {
   if (seconds > 0) {
     console.log(seconds);

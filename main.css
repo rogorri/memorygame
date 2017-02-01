@@ -1,4 +1,4 @@
-.header {
+h1 {
   text-align: center;
 }
 
@@ -17,7 +17,7 @@
 }
 
 #OK {
-float:right;
+  float:right;
 
 }
 
@@ -26,21 +26,20 @@ float:right;
 }
 
 
-#downcol {
-      width: 100px;
-      height: 100px;
-      background-color: red;
-      position: relative;
-      -webkit-animation-name: example; /* Safari 4.0 - 8.0 */
-      -webkit-animation-duration: 2s; /* Safari 4.0 - 8.0 */
-      animation-name: example;
-      animation-duration: 2s;
-    }
+#ScreenNumberDiv{
+                  width: 100px;
+                  height: 100px;
+                  left:0em;
+                  margin-top: 15em;
 
-@keyframes example {
-      0%   {background-color:red; left:0em; top:0em;}
-      100% {background-color:red; left:0em; top:15em;}
-/*#ScreenNumberDiv {
-  position: absolute;
-  bottom: 3em;
-}*/
+}
+
+
+#card {
+    animation: fadein 1s;
+  }
+
+@keyframes fadein {
+    from {opacity:0;    }
+    to   {opacity:1;    }
+}

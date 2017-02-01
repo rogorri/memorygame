@@ -5,7 +5,7 @@
        <link type="text/css" rel="stylesheet" href="main.css" media="screen">
     </head>
     <body>
-      <secction class="header">
+      <secction class="container-fluid">
           <div class="row">
             <div class="col-sm-12">
                 <h1>Brain Game</h1>
@@ -14,39 +14,43 @@
                     <div id="counter"></div>
                   </div>
                   <div class="col-sm-2" id="pointscol">
-                    <h3>Your Points</h3>
-                    <div id="pointer"></div>
+                    <h3>Points</h3>
+                  <div id="pointer"></div>
                   </div>
             </div>
           </div>
-      </section>
 
-      <section id="gamespace">
+
+      <div id="gamespace">
         <div class="row">
-                  <div class="col-md-4">
-                  </div>
+            <div class="col-md-4">
+                </div>
+
                   <div class="col-md-4" id="memoryboard">
-                    <div class="col-md-5" id="rellcol"></div>
-                    <div class="col-md-2" id="downcol">
-                      <div id="ScreenNumberDiv"></div>
-                    <div class="col-md-5" id="rellcol"></div>
-                    </div>
-                      <div id="answer"></div>
-                        <div class="col-xs-12" id="finalrow">
-                          <div class="col-xs-6" id="answeryes">
-                            <img src="images/button-ok.png" class="button" id="OK">
-                          </div>
-                          <div class="col-xs-6" id="answerno">
-                            <img src="images/button-ko.png" class="button" id="KO">
-                          </div>
+                    <div class="row" id="bigrow">
+                    <div class="col-md-2 col-sm-offset-5 main" id="downcol0">
+                      <div id="ScreenNumberDiv">
+                        <!-- <img src="images/ficha0.png" class="hidden" id="card0">
+                        <img src="images/ficha1.png" class="hidden" id="card1"> -->
                       </div>
                     </div>
-                  <div class="col-md-4">
+                    </div>
+                    <div class="col-xs-12" id="finalrow">
+                       <div class="col-xs-6" id="answeryes">
+                          <img src="images/button-ok.png" class="button" id="OK">
+                       </div>
+                       <div class="col-xs-6" id="answerno">
+                          <img src="images/button-ko.png" class="button" id="KO">
+                       </div>
+                    </div>
                   </div>
-
+                <div class="col-md-4">
+            </div>
+        </div>
+      </div>
       </secction>
       <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/1.8.3/jquery.min.js"></script>
       <script type="text/javascript" src="http://code.jquery.com/ui/1.9.2/jquery-ui.js"></script>
       <link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
-      <script type="text/javascript" src="js/SameSimbol2.js"></script>
+      <script type="text/javascript" src="js/SameSimbol3.js"></script>
 </html>
