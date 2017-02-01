@@ -17,6 +17,7 @@ SameSimbol.prototype.start = function (){
   this.checkNumber = this._getRandom();
   var interior = this.screenNumber;
   var interior1 = this.checkNumber;
+
       $("#ScreenNumberDiv").append("<img src='images/ficha"+this.checkNumber+".png'  id='card'>");
       console.log(this.checkNumber);
       var timeoutId = setTimeout(function () {
@@ -34,32 +35,51 @@ SameSimbol.prototype.nextNumber = function () {
   this.screenNumber = this._getRandom();
   $("#card").remove();
   $("#ScreenNumberDiv").append("<img src='images/ficha"+this.screenNumber+".png'  id='card'>");
+
 };
 
 SameSimbol.prototype.evaluate = function () {
   if (this.screenNumber === this.checkNumber){
     if (this.clickedID === "OK") {
-      this.counter ++;
+      this.counter +=10;
       document.getElementById("pointer").innerHTML = this.counter;
+
+      $("#welldone").append("<img src='images/green-cloud.png'>");
+      $("#welldone img").fadeOut(1000);
       console.log ("Lo has echo bien, ya tienes " + this.counter + " puntos");
     }
-    else {console.log ("Fallaste, acumulas " + this.counter + " puntos");}
+    else {
+      this.counter -=10;
+      document.getElementById("pointer").innerHTML = this.counter;
+
+      $("#tryagain").append("<img src='images/red-cloud.png'>");
+      $("#tryagain img").fadeOut(1000);
+      console.log ("Fallaste, acumulas " + this.counter + " puntos");}
   }
   else {
     if (this.clickedID === "KO"){
-    this.counter ++;
+    this.counter +=10;
     document.getElementById("pointer").innerHTML = this.counter;
+
+    $("#welldone").append("<img src='images/green-cloud.png'>");
+    $("#welldone img").fadeOut(1000);
     console.log ("Lo has echo bien, ya tienes " + this.counter + " puntos");}
     else {
+      this.counter -=10;
+      document.getElementById("pointer").innerHTML = this.counter;
+
+      $("#tryagain").append("<img src='images/red-cloud.png'>");
+      $("#tryagain img").fadeOut(1000);
       {console.log ("Fallaste, acumulas " + this.counter + " puntos");
     }
   }
 }
 };
 
-SameSimbol.prototype.final = function () {
+SameSimbol.prototype.close = function () {
 this.finalScore = this.counter;
-
+document.getElementById("myNav").style.width = "100%";
+document.getElementById("totalscore").innerHTML = this.finalScore;
  };
 
 
@@ -73,7 +93,7 @@ var intervalId = setInterval(function() {
   } else {
     document.getElementById("counter").innerHTML = "Se te acabo el tiempo";
     clearInterval(intervalId);
-    newgame.final();
+    newgame.close();
   }
 	seconds--;
 }, 1000);
@@ -82,15 +102,9 @@ var intervalId = setInterval(function() {
 
 
 
-
-
 $( document ).ready(function() {
   $(".button").on("click", function (e) {
-
-    console.log("Has hecho click");
-    console.log($(this).attr("id"));
     newgame.clickedID = $(this).attr("id");
-    console.log("su Id es " + newgame.clickedID);
     newgame.evaluate();
     newgame.nextNumber();
   });
