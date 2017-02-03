@@ -5,50 +5,63 @@
        <link type="text/css" rel="stylesheet" href="main.css" media="screen">
     </head>
     <body>
+      
       <secction class="container-fluid">
           <div class="row">
             <div class="col-sm-12">
-                <h1>Brain Game</h1>
+                <h1>Stamps Memo</h1>
                   <div class="col-sm-2 col-sm-offset-4" id="timecol">
                     <h3>Time Left</h3>
                     <div id="counter"></div>
                   </div>
                   <div class="col-sm-2" id="pointscol">
                     <h3>Points</h3>
-                  <div id="pointer"></div>
+                  <div id="pointer">0</div>
                   </div>
             </div>
           </div>
 
 
       <div id="gamespace">
-        <div class="row">
-            <div class="col-md-4">
-                </div>
 
-                  <div class="col-md-4" id="memoryboard">
-                    <div class="row" id="bigrow">
-                      <div class="col-md-5" id="tryagain">
+        <div class="row">
+
+
+
+                  <div class="col-xs-4 col-xs-offset-4 row" id="memoryboard">
+
+                    <div class="row col-xs-12" id="bigrow">
+
+                      <div class="col-xs-5" id="tryagain">
                       </div>
-                    <div class="col-md-2" id="downcol0">
-                      <div id="ScreenNumberDiv">
+
+                      <div class="col-xs-2" id="downcol0">
+                        <div id="ScreenNumberDiv">
+                        </div>
                       </div>
+
+                      <div class="col-xs-5" id="welldone">
+                      </div>
+
                     </div>
-                    <div class="col-md-5" id="welldone">
-                    </div>
-                    </div>
+
+                    <!-- botones -->
                     <div class="col-xs-12" id="finalrow">
-                       <div class="col-xs-6" id="answeryes">
+                       <div class="col-xs-2 col-xs-offset-4" id="answeryes">
                           <img src="images/button-ok.png" class="button" id="OK">
                        </div>
-                       <div class="col-xs-6" id="answerno">
+                       <div class="col-xs-2" id="answerno">
                           <img src="images/button-ko.png" class="button" id="KO">
                        </div>
                     </div>
                   </div>
-                <div class="col-md-4">
+
+
+                <div class="col-xs-4">
             </div>
         </div>
+
+
       </div>
       </secction>
       <!-- The overlay -->
@@ -59,7 +72,7 @@
 
         <!-- Overlay content -->
         <div class="overlay-content">
-        <h1>Your Score was  <span id="totalscore"></span></h1>
+        <h1>Your Score is  <span id="totalscore"></span></h1>
         <button class="btn" value="Refresh Page" onClick="window.location.reload()">Start Again</button>
         </div>
 

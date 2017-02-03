@@ -1,11 +1,27 @@
 h1 {
   text-align: center;
+  font-family: fantasy;
+  color: white;
+}
+
+body{
+background-image: url(images/Fondo.png);
+font-family: fantasy;
+font-family: verdana;
+}
+
+#pointscol {
+  text-align: right;
+  color: white;
+}
+
+#timecol {
+  color: white;
 }
 
 
+
 #memoryboard {
-  border-radius: 10px;
-  background-color: grey;
   height: 30em;
   text-align: center;
   position:relative;
@@ -14,6 +30,7 @@ h1 {
 #finalrow{
   position: absolute;
   bottom: 2em;
+  right: .2em;
 }
 
 #OK {
@@ -30,19 +47,20 @@ h1 {
                   width: 100px;
                   height: 100px;
                   left:0em;
-                  margin-top: 15em;
+                  margin-top: 9em;
 
 }
+
+#downcol0 {
+  padding: 0;
+}
+
 #weldone {
-    width: 100px;
-    height: 100px;
     text-align: right;
     animation: fadein 5s;
   }
 
 #tryagain {
-  width: 100px;
-  height: 100px;
   text-align: left;
   animation: fadein 5s;
   }

@@ -1,3 +1,8 @@
+
+
+
+
+
 function SameSimbol () {
   this.screenNumber = null;
   this.checkNumber = null;
@@ -8,7 +13,7 @@ function SameSimbol () {
 
 
 SameSimbol.prototype._getRandom = function () {
-  return Math.floor(Math.random()*2);
+  return Math.floor(Math.random()*3);
 };
 
 
@@ -45,7 +50,7 @@ SameSimbol.prototype.evaluate = function () {
       document.getElementById("pointer").innerHTML = this.counter;
 
       $("#welldone").append("<img src='images/green-cloud.png'>");
-      $("#welldone img").fadeOut(1000);
+      $("#welldone img").fadeOut(1500);
       console.log ("Lo has echo bien, ya tienes " + this.counter + " puntos");
     }
     else {
@@ -53,7 +58,7 @@ SameSimbol.prototype.evaluate = function () {
       document.getElementById("pointer").innerHTML = this.counter;
 
       $("#tryagain").append("<img src='images/red-cloud.png'>");
-      $("#tryagain img").fadeOut(1000);
+      $("#tryagain img").fadeOut(1500);
       console.log ("Fallaste, acumulas " + this.counter + " puntos");}
   }
   else {
@@ -62,14 +67,14 @@ SameSimbol.prototype.evaluate = function () {
     document.getElementById("pointer").innerHTML = this.counter;
 
     $("#welldone").append("<img src='images/green-cloud.png'>");
-    $("#welldone img").fadeOut(1000);
+    $("#welldone img").fadeOut(1500);
     console.log ("Lo has echo bien, ya tienes " + this.counter + " puntos");}
     else {
       this.counter -=10;
       document.getElementById("pointer").innerHTML = this.counter;
 
       $("#tryagain").append("<img src='images/red-cloud.png'>");
-      $("#tryagain img").fadeOut(1000);
+      $("#tryagain img").fadeOut(1500);
       {console.log ("Fallaste, acumulas " + this.counter + " puntos");
     }
   }
